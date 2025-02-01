@@ -6,6 +6,7 @@ import random
 import keyboard
 import mouse
 import sqlite3
+import sys
 
 conn = sqlite3.connect('settings.db')
 cursor = conn.cursor() # 커서 생성
@@ -61,7 +62,7 @@ def start_autoclicker():
     thread.start()
 
 def stop_autoclicker():
-    exit(0)
+    sys.exit(0)
     
 def save_settings():
     global cursor, setting_name, macro_with, conn, autoclicker_key
